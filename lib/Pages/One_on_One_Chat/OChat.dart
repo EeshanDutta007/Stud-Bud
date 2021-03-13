@@ -2,8 +2,6 @@ import 'constants.dart';
 import 'database1.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-//import 'package:saferx/home.dart';
-//import 'package:saferx/main.dart';
 
 class Chat extends StatefulWidget {
   final String chatRoomId;
@@ -76,7 +74,7 @@ class _ChatState extends State<Chat> {
             Navigator.pop(context);
           },
         ),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.purple,
         title: Text('ChatApp'),
       ),
       body: Container(
@@ -89,7 +87,7 @@ class _ChatState extends State<Chat> {
               child: Container(
                 decoration: BoxDecoration(
                   border: Border(
-                    top: BorderSide(color: Colors.blue, width: 2.0),
+                    top: BorderSide(color: Colors.purple, width: 2.0),
                   ),
                 ),
                 padding: EdgeInsets.symmetric(vertical: 4),
@@ -122,12 +120,18 @@ class _ChatState extends State<Chat> {
                             width: 40,
                             decoration: BoxDecoration(
                                 gradient: LinearGradient(
-                                    colors: [Colors.blue, Colors.blue],
+                                    colors: [Colors.purple, Colors.purple],
                                     begin: FractionalOffset.topLeft,
                                     end: FractionalOffset.bottomRight),
                                 borderRadius: BorderRadius.circular(40)),
                             padding: EdgeInsets.all(12),
-                            child: Icon(Icons.send)),
+                            child: Center(
+                              child: Icon(
+                                Icons.send,
+                                size: 20,
+                                color: Colors.white,
+                              ),
+                            )),
                       ),
                     ),
                   ],
@@ -171,12 +175,12 @@ class MessageTile extends StatelessWidget {
                     topRight: Radius.circular(30.0),
                   ),
             elevation: 5.0,
-            color: sendByMe ? Colors.blue : Colors.white,
+            color: sendByMe ? Colors.purple : Colors.white,
             child: Padding(
                 padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
                 child: Text(message,
                     style: TextStyle(
-                      color: sendByMe ? Colors.white : Colors.blue,
+                      color: sendByMe ? Colors.white : Colors.purple,
                       fontSize: 15.0,
                     ))),
           ),

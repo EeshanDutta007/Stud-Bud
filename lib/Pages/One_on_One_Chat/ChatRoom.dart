@@ -1,5 +1,3 @@
-import 'package:hexcolor/hexcolor.dart';
-
 import '../../authentication.dart';
 import 'constants.dart';
 import 'database1.dart';
@@ -71,7 +69,7 @@ class _ChatRoomState extends State<ChatRoom> {
     return Scaffold(
       appBar: AppBar(
         title: Center(child: Text('Chatapp')),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.purple,
         elevation: 0.0,
         centerTitle: true,
         actions: [
@@ -114,35 +112,41 @@ class ChatRoomsTile extends StatelessWidget {
                       chatRoomId: chatRoomId,
                     )));
       },
-      child: Container(
-        color: Colors.black26,
-        padding: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
-        child: Row(
-          children: [
-            Container(
-              height: 30,
-              width: 30,
-              decoration: BoxDecoration(
-                  color: Colors.blue, borderRadius: BorderRadius.circular(30)),
-              child: Text(userName.substring(0, 1),
-                  textAlign: TextAlign.center,
+      child: Card(
+        elevation: 8,
+        child: Container(
+          color: Colors.white,
+          padding: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+          child: Row(
+            children: [
+              Container(
+                height: 30,
+                width: 30,
+                decoration: BoxDecoration(
+                    color: Colors.purple,
+                    borderRadius: BorderRadius.circular(30)),
+                child: Center(
+                  child: Text(userName.substring(0, 1),
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontFamily: 'OverpassRegular',
+                          fontWeight: FontWeight.w300)),
+                ),
+              ),
+              SizedBox(
+                width: 12,
+              ),
+              Text(userName,
+                  textAlign: TextAlign.start,
                   style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontSize: 16,
                       fontFamily: 'OverpassRegular',
-                      fontWeight: FontWeight.w300)),
-            ),
-            SizedBox(
-              width: 12,
-            ),
-            Text(userName,
-                textAlign: TextAlign.start,
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
-                    fontFamily: 'OverpassRegular',
-                    fontWeight: FontWeight.w300))
-          ],
+                      fontWeight: FontWeight.w300))
+            ],
+          ),
         ),
       ),
     );
