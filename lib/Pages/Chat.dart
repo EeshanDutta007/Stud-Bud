@@ -20,7 +20,7 @@ class TutorsListState extends State<TutorsList> {
             SizedBox(
               height: 50,
             ),
-            Row(
+            Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
@@ -28,7 +28,7 @@ class TutorsListState extends State<TutorsList> {
                     "List of Tutors",
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: 40,
+                        fontSize: 36,
                         fontWeight: FontWeight.bold),
                   ),
                 ),
@@ -102,7 +102,7 @@ class TutorCardsState extends State<TutorCards> {
           height: 60,
           padding: EdgeInsets.only(left: 5, top: 5),
           child: Text(widget.name,
-              style: TextStyle(color: Colors.black, fontSize: 20)),
+              style: TextStyle(color: Colors.black, fontSize: 16)),
         ));
   }
 }

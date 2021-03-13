@@ -40,6 +40,9 @@ dependencies:
   model_viewer:
   hexcolor:
   all_sensors:
+  http: ^0.12.2
+  html: ^0.14.0+4
+  flutter_tts: ^3.0.0
 
 
   # The following adds the Cupertino Icons font to your application.
