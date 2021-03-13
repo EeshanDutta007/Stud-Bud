@@ -1,16 +1,10 @@
-# stud_bud
+# STUDBUD
 
-A new Flutter application.
+## Features to be made
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. AR
+2. Parafi
+3. Wolf AI
+4. One on one chat and video call
+5. Tutor list
+6. Flip to Focus
