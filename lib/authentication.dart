@@ -9,6 +9,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:stud_bud/Pages/NavBar.dart';
+import 'Pages/One_on_One_Chat/database1.dart';
 import 'main.dart';
 
 String select = "Student";
@@ -153,6 +154,13 @@ class _AuthenticationState extends State<Authentication> {
                   final newUser = await FirebaseAuth.instance
                       .createUserWithEmailAndPassword(
                           email: email, password: password);
+                  Map<String, String> userDataMap = {
+                    "userName":
+                    loginData.name.substring(0, loginData.name.length - 10),
+                    "userEmail": loginData.name,
+                  };
+                  DatabaseMethods databaseMethods = new DatabaseMethods();
+                  databaseMethods.addUserInfo(userDataMap);
                   userRefrence
                       .doc(email.substring(0, email.indexOf('@')))
                       .set({
