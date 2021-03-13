@@ -1,4 +1,5 @@
 import 'package:hexcolor/hexcolor.dart';
+import 'package:stud_bud/Pages/One_on_One_Chat/OChat.dart';
 
 import 'ChatRoom.dart';
 
@@ -9,8 +10,6 @@ import 'database1.dart';
 import 'widget.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-
-import 'Ochat.dart';
 
 class Search extends StatefulWidget {
   @override
@@ -93,11 +92,11 @@ class _SearchState extends State<Search> {
             children: [
               Text(
                 userName,
-                style: TextStyle(color: HexColor('ff4965'), fontSize: 16),
+                style: TextStyle(color: Colors.blue, fontSize: 16),
               ),
               Text(
                 userEmail,
-                style: TextStyle(color: HexColor('ff4965'), fontSize: 16),
+                style: TextStyle(color: Colors.blue, fontSize: 16),
               )
             ],
           ),
@@ -109,8 +108,7 @@ class _SearchState extends State<Search> {
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
               decoration: BoxDecoration(
-                  color: HexColor('ff4965'),
-                  borderRadius: BorderRadius.circular(24)),
+                  color: Colors.blue, borderRadius: BorderRadius.circular(24)),
               child: Text(
                 "Message",
                 style: TextStyle(color: Colors.white, fontSize: 16),
@@ -147,7 +145,7 @@ class _SearchState extends State<Search> {
           },
         ),
         title: Text('Chatroom'),
-        backgroundColor: HexColor('ff4965'),
+        backgroundColor: Colors.blue,
       ),
       body: isLoading
           ? Container(
@@ -160,7 +158,7 @@ class _SearchState extends State<Search> {
                 children: [
                   Container(
                     padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-                    color: HexColor('ff4965'),
+                    color: Colors.blue,
                     child: Row(
                       children: [
                         Expanded(
@@ -193,11 +191,11 @@ class _SearchState extends State<Search> {
                                       end: FractionalOffset.bottomRight),
                                   borderRadius: BorderRadius.circular(40)),
                               padding: EdgeInsets.all(12),
-                              child: Image.asset(
-                                "images/search_white.png",
-                                height: 25,
-                                width: 25,
-                              )),
+                              child: Center(
+                                  child: Icon(
+                                Icons.search,
+                                color: Colors.white,
+                              ))),
                         )
                       ],
                     ),

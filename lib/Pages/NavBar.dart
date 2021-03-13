@@ -44,14 +44,14 @@ class _SideNavBarState extends State<SideNavBar> {
                       SizedBox(height: 20),
                     ],
                   ),
-                  backgroundColor: Colors.white.withOpacity(0.6),
+                  backgroundColor: Colors.yellow.withOpacity(0.8),
                   selectedIndex: _selectedIndex,
                   onDestinationSelected: (index) {
                     setState(() {
                       _selectedIndex = index;
                     });
                   },
-                  labelType: NavigationRailLabelType.selected,
+                  labelType: NavigationRailLabelType.all,
                   minWidth: 20,
                   groupAlignment: -0.2,
                   selectedIconTheme: IconThemeData(color: Colors.blue),

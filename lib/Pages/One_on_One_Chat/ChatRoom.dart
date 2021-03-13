@@ -71,7 +71,7 @@ class _ChatRoomState extends State<ChatRoom> {
     return Scaffold(
       appBar: AppBar(
         title: Center(child: Text('Chatapp')),
-        backgroundColor: HexColor('ff4965'),
+        backgroundColor: Colors.blue,
         elevation: 0.0,
         centerTitle: true,
         actions: [
@@ -123,8 +123,7 @@ class ChatRoomsTile extends StatelessWidget {
               height: 30,
               width: 30,
               decoration: BoxDecoration(
-                  color: HexColor('ff4965'),
-                  borderRadius: BorderRadius.circular(30)),
+                  color: Colors.blue, borderRadius: BorderRadius.circular(30)),
               child: Text(userName.substring(0, 1),
                   textAlign: TextAlign.center,
                   style: TextStyle(

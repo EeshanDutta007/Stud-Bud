@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'One_on_One_Chat/OChat.dart';
+import 'package:stud_bud/Pages/One_on_One_Chat/ChatRoom.dart';
 
 class TutorsList extends StatefulWidget {
   @override
@@ -20,14 +20,29 @@ class TutorsListState extends State<TutorsList> {
             SizedBox(
               height: 50,
             ),
-            Container(
-              child: Text(
-                "List of Tutors",
-                style: TextStyle(
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  child: Text(
+                    "List of Tutors",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 40,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+                IconButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => ChatRoom()));
+                  },
+                  icon: Icon(
+                    Icons.chat,
                     color: Colors.white,
-                    fontSize: 40,
-                    fontWeight: FontWeight.bold),
-              ),
+                  ),
+                )
+              ],
             ),
             SizedBox(height: 40),
             StreamBuilder<QuerySnapshot>(
