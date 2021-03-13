@@ -6,6 +6,8 @@ import 'package:stud_bud/Pages/FliptoFocus.dart';
 import 'package:stud_bud/Pages/Parafi.dart';
 import 'package:stud_bud/Pages/Profile.dart';
 import 'package:stud_bud/Pages/WolfAI.dart';
+import 'Chat.dart';
+import 'One_on_One_Chat/OChat.dart';
 
 class SideNavBar extends StatefulWidget {
   @override
