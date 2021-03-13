@@ -18,6 +18,9 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
+  TextEditingController Parent1 = new TextEditingController();
+  TextEditingController Parent2 = new TextEditingController();
+  TextEditingController  Tutor = new TextEditingController();
   File _image;
   final picker = ImagePicker();
   String CircleAvtarLink = null;
@@ -187,6 +190,39 @@ class _ProfileState extends State<Profile> {
             ),
           ),
           SizedBox(height: 24),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                child: TextField(
+                  controller: Parent1,
+                  decoration: InputDecoration(
+                    hintText: 'Parent1'
+                  )
+                ),
+              ),
+            ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              child: TextField(
+                controller: Parent2,
+                  decoration: InputDecoration(
+                      hintText: 'Parent2'
+                  )
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              child: TextField(
+                controller: Tutor,
+                  decoration: InputDecoration(
+                      hintText: 'Tutor'
+                  )
+              ),
+            ),
+          ),
             ElevatedButton(
               onPressed: () async {
                 FirebaseAuth.instance.signOut();
