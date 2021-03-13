@@ -8,6 +8,7 @@ import 'package:flutter/scheduler.dart' show timeDilation;
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:stud_bud/Pages/NavBar.dart';
 import 'main.dart';
 
 String select = "Student";
@@ -19,8 +20,8 @@ class Authentication extends StatefulWidget {
 }
 
 class _AuthenticationState extends State<Authentication> {
-
-  CollectionReference userRefrence = FirebaseFirestore.instance.collection('Users');
+  CollectionReference userRefrence =
+      FirebaseFirestore.instance.collection('Users');
   String password = '';
   Duration get loginTime => Duration(milliseconds: timeDilation.ceil() * 2250);
   Future<String> _loginUser(LoginData data) {
@@ -28,6 +29,7 @@ class _AuthenticationState extends State<Authentication> {
       return null;
     });
   }
+
   Future<String> _recoverPassword(String name) {
     return Future.delayed(loginTime).then((_) {
       return null;
@@ -49,12 +51,14 @@ class _AuthenticationState extends State<Authentication> {
         body: Stack(
           children: [
             Container(
-              height: h/1.2,
+              height: h / 1.2,
               width: w,
               child: RotatedBox(
                 quarterTurns: 0,
                 child: FlareActor(
-                  select == "Student" ? 'assets/auth yellow flare.flr' : 'assets/auth blue flare.flr',
+                  select == "Student"
+                      ? 'assets/auth yellow flare.flr'
+                      : 'assets/auth blue flare.flr',
                   animation: 'Flow',
                   alignment: Alignment.bottomCenter,
                   fit: BoxFit.fill,
@@ -121,7 +125,7 @@ class _AuthenticationState extends State<Authentication> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => LoggedInWidget()));
+                                builder: (context) => SideNavBar()));
                       } else if (select1 == select && select == 'Student') {
                         prefs.setString('stud_bud_email', email);
                         prefs.setString('student_tutor', select1);
@@ -129,7 +133,7 @@ class _AuthenticationState extends State<Authentication> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => LoggedInWidget()));
+                                builder: (context) => SideNavBar()));
                       } else {
                         print('Correct the credentials');
                       }
@@ -157,8 +161,10 @@ class _AuthenticationState extends State<Authentication> {
                       })
                       .then((value) => print('user Added'))
                       .catchError((error) => print('Failed to add'));
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Authentication()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => Authentication()));
                 } catch (e) {
                   print(e);
                 }
@@ -172,27 +178,40 @@ class _AuthenticationState extends State<Authentication> {
             Align(
               alignment: Alignment.topRight,
               child: Padding(
-                padding: EdgeInsets.only(right: .1*w, top: .10*h),
+                padding: EdgeInsets.only(right: .1 * w, top: .10 * h),
                 child: Column(
                   children: [
-                    Text('Account', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white, fontFamily: 'Fredoka One')),
-                    Text('Type', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white, fontFamily: 'Fredoka One')),
+                    Text('Account',
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontFamily: 'Fredoka One')),
+                    Text('Type',
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontFamily: 'Fredoka One')),
                     SizedBox(
                       height: 15,
                     ),
                     RaisedButton(
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(12.0))),
+                          borderRadius:
+                              BorderRadius.all(Radius.circular(12.0))),
                       elevation: 0.5,
                       color: Colors.transparent,
                       child: Container(
-                        width: .225*w,
-                        height: .075*h,
+                        width: .225 * w,
+                        height: .075 * h,
                         child: Align(
-                          alignment: select=="Student" ? Alignment.centerRight : Alignment.centerLeft,
+                          alignment: select == "Student"
+                              ? Alignment.centerRight
+                              : Alignment.centerLeft,
                           child: Container(
-                            width: .07*h,
-                            height: .1*w,
+                            width: .07 * h,
+                            height: .1 * w,
                             child: Center(
                               child: Text(
                                 select,
@@ -205,18 +224,21 @@ class _AuthenticationState extends State<Authentication> {
                             ),
                             decoration: BoxDecoration(
                                 color: Colors.white,
-                                borderRadius: BorderRadius.all(Radius.circular(12))
-                            ),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(12))),
                           ),
                         ),
                       ),
                       onPressed: () {
                         setState(() {
-                          if(select=="Student")
-                            select="Tutor";
+                          if (select == "Student")
+                            select = "Tutor";
                           else
-                            select="Student";
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => Authentication()));
+                            select = "Student";
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Authentication()));
                         });
                       },
                     ),
@@ -231,52 +253,52 @@ class _AuthenticationState extends State<Authentication> {
   }
 }
 
-class LoggedInWidget extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-
-    return Scaffold(
-      body: Container(
-        alignment: Alignment.center,
-        color: Colors.white,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Logged In',
-              style: TextStyle(color: Colors.black),
-            ),
-            SizedBox(height: 8),
-            Text(
-              'Email: ' + email,
-              style: TextStyle(color: Colors.black),
-            ),
-            SizedBox(height: 8),
-            Text(
-              'Account: ' + acc,
-              style: TextStyle(color: Colors.black),
-            ),
-            SizedBox(height: 24),
-            Text(
-              '👉👌',
-              style: TextStyle(color: Colors.black, fontSize: 64),
-            ),
-            SizedBox(height: 24),
-            ElevatedButton(
-              onPressed: () async {
-                FirebaseAuth.instance.signOut();
-                final prefs = await SharedPreferences.getInstance();
-                prefs.remove('stud_bud_email');
-                prefs.remove('student_tutor');
-                main();
-                Navigator.push(context, MaterialPageRoute(builder: (context) => Authentication()));
-              },
-              child: Text('Logout'),
-            )
-          ],
-        ),
-      ),
-    );
-  }
-}
+// class LoggedInWidget extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Container(
+//         alignment: Alignment.center,
+//         color: Colors.white,
+//         child: Column(
+//           crossAxisAlignment: CrossAxisAlignment.center,
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           children: [
+//             Text(
+//               'Logged In',
+//               style: TextStyle(color: Colors.black),
+//             ),
+//             SizedBox(height: 8),
+//             Text(
+//               'Email: ' + email,
+//               style: TextStyle(color: Colors.black),
+//             ),
+//             SizedBox(height: 8),
+//             Text(
+//               'Account: ' + acc,
+//               style: TextStyle(color: Colors.black),
+//             ),
+//             SizedBox(height: 24),
+//             Text(
+//               '👉👌',
+//               style: TextStyle(color: Colors.black, fontSize: 64),
+//             ),
+//             SizedBox(height: 24),
+//             ElevatedButton(
+//               onPressed: () async {
+//                 FirebaseAuth.instance.signOut();
+//                 final prefs = await SharedPreferences.getInstance();
+//                 prefs.remove('stud_bud_email');
+//                 prefs.remove('student_tutor');
+//                 main();
+//                 Navigator.push(context,
+//                     MaterialPageRoute(builder: (context) => Authentication()));
+//               },
+//               child: Text('Logout'),
+//             )
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
