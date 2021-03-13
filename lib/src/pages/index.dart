@@ -27,9 +27,10 @@ class IndexState extends State<IndexPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.yellow,
       appBar: AppBar(
         title: Center(child: Text('Video Call')),
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.blue,
       ),
       body: Center(
         child: Container(
@@ -61,7 +62,7 @@ class IndexState extends State<IndexPage> {
                       child: RaisedButton(
                         onPressed: onJoin,
                         child: Text('Join'),
-                        color: Colors.green,
+                        color: Colors.blue,
                         textColor: Colors.white,
                       ),
                     )
