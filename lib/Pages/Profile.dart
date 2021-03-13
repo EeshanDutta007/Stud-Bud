@@ -8,7 +8,9 @@ import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 import 'package:path/path.dart' as path;
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../authentication.dart';
+import '../main.dart';
 
 class Profile extends StatefulWidget {
   @override
@@ -184,6 +186,19 @@ class _ProfileState extends State<Profile> {
               ],
             ),
           ),
+          SizedBox(height: 24),
+            ElevatedButton(
+              onPressed: () async {
+                FirebaseAuth.instance.signOut();
+                final prefs = await SharedPreferences.getInstance();
+                prefs.remove('stud_bud_email');
+                prefs.remove('student_tutor');
+                main();
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => Authentication()));
+              },
+              child: Text('Logout'),
+            )
         ],
       ),
     ));

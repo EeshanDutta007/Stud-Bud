@@ -79,15 +79,15 @@ class _FlipFocusState extends State<FlipFocus> {
                             hoursStr = ((newTick / (60 * 60)) % 60)
                                 .floor()
                                 .toString()
-                                .padLeft(1, '0');
+                                .padLeft(2, '0');
                             minutesStr = ((newTick / 60) % 60)
                                 .floor()
                                 .toString()
-                                .padLeft(1, '0');
+                                .padLeft(2, '0');
                             secondsStr = (newTick % 60)
                                 .floor()
                                 .toString()
-                                .padLeft(1, '0');
+                                .padLeft(2, '0');
                           }
                           else
                           {
@@ -98,7 +98,7 @@ class _FlipFocusState extends State<FlipFocus> {
                     });
 
                   },
-                  color: Colors.green,
+                  color: Colors.blue,
                   child: Text(
                     'START',
                     style: TextStyle(
