@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "774030312358",
+    "project_id": "stud-bud-301a6",
+    "storage_bucket": "stud-bud-301a6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:774030312358:android:71b494a398873c3e92c567",
+        "android_client_info": {
+          "package_name": "com.ctrlaltelite.stud_bud"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "774030312358-9vgompackqvvffucdm6vbku78qhng68a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdenf-jTFjtKxgXG3AmXU3JycQzY3ZzEI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "774030312358-9vgompackqvvffucdm6vbku78qhng68a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
