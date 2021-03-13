@@ -7,8 +7,9 @@ import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 import 'package:path/path.dart' as path;
-import 'package:firebase_storage/firebase_storage.dart' ;
+import 'package:firebase_storage/firebase_storage.dart';
 import '../authentication.dart';
+
 class Profile extends StatefulWidget {
   @override
   _ProfileState createState() => _ProfileState();
@@ -19,13 +20,13 @@ class _ProfileState extends State<Profile> {
   final picker = ImagePicker();
   String CircleAvtarLink = null;
   CollectionReference UserRefrance =
-  FirebaseFirestore.instance.collection('ProfilePicUrl');
+      FirebaseFirestore.instance.collection('ProfilePicUrl');
 
   Future<void> AddToFirestore(var url) {
     return UserRefrance.doc(email.substring(0, email.indexOf('@')))
         .set({
-      'URL': url,
-    })
+          'URL': url,
+        })
         .then((value) => print('user added'))
         .catchError((error) => print('Failed to add User'));
   }
@@ -144,33 +145,47 @@ class _ProfileState extends State<Profile> {
 
   @override
   Widget build(BuildContext context) {
-    resizeToAvoidBottomInset: true;
-    return
-      SafeArea(
-        child: Center(
-          child: SingleChildScrollView(
-            child: Column(
+    resizeToAvoidBottomInset:
+    true;
+    return SafeArea(
+        child: Container(
+      width: MediaQuery.of(context).size.width - 150,
+      child: Column(
+        children: [
+          Center(
+            child: Stack(
+              //mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Center(
-                  child: Column(
-                    children: [
-                      CircleAvatar(
-                        radius: 50.0,
-                        backgroundImage: CircleAvtarLink==null?NetworkImage('https://raw.githubusercontent.com/ParthPandey2236/Portfolio/master/images/profile.png'):NetworkImage(CircleAvtarLink),
-                      ),
-                      RaisedButton(
-                        child: Icon(Icons.add_a_photo),
-                        onPressed: displayBottomSheet,
-                      ),
-
+                Padding(
+                  padding: EdgeInsets.only(top: 40.0),
+                  child: CircleAvatar(
+                    radius: 50.0,
+                    backgroundImage: CircleAvtarLink == null
+                        ? NetworkImage(
+                            'https://raw.githubusercontent.com/ParthPandey2236/Portfolio/master/images/profile.png')
+                        : NetworkImage(CircleAvtarLink),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 100, left: 50),
+                  child: ElevatedButton(
+                    child: Container(
+                        width: 50,
+                        height: 50,
+                        child: Icon(
+                          Icons.add_a_photo,
+                          color: Colors.blue,
+                        )),
+                    onPressed: displayBottomSheet,
+                    style: ElevatedButton.styleFrom(
+                        primary: Colors.yellow, shape: CircleBorder()),
+                  ),
+                ),
               ],
             ),
           ),
         ],
       ),
-    )
-    )
-
-    );
+    ));
   }
 }

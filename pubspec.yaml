@@ -38,6 +38,7 @@ dependencies:
   image_picker: ^0.6.7+14
   firebase_core: ^0.5.2+1
   model_viewer:
+  hexcolor:
 
 
   # The following adds the Cupertino Icons font to your application.

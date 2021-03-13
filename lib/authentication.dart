@@ -280,7 +280,7 @@ class _AuthenticationState extends State<Authentication> {
 //             ),
 //             SizedBox(height: 24),
 //             Text(
-//               '👉👌',
+//               '',
 //               style: TextStyle(color: Colors.black, fontSize: 64),
 //             ),
 //             SizedBox(height: 24),

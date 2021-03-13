@@ -42,10 +42,10 @@ class _SplashState extends State<Splash> {
       if (email == null || acc == null) {
         email = '';
         acc = '';
-        Navigator.push(
+        Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => Authentication()));
       } else {
-        Navigator.push(
+        Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => SideNavBar()));
       }
     });
