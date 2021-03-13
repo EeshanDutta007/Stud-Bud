@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:stud_bud/Pages/One_on_One_Chat/ChatRoom.dart';
 import 'package:stud_bud/Pages/One_on_One_Chat/OChat.dart';
+import 'package:stud_bud/src/pages/index.dart';
 
 class TutorsList extends StatefulWidget {
   @override
@@ -40,6 +41,16 @@ class TutorsListState extends State<TutorsList> {
                   },
                   icon: Icon(
                     Icons.chat,
+                    color: Colors.white,
+                  ),
+                ),
+                IconButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => IndexPage()));
+                  },
+                  icon: Icon(
+                    Icons.video_call_rounded,
                     color: Colors.white,
                   ),
                 )

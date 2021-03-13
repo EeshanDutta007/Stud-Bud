@@ -43,6 +43,8 @@ dependencies:
   http: ^0.12.2
   html: ^0.14.0+4
   flutter_tts: ^3.0.0
+  agora_rtc_engine: 1.0.5
+  permission_handler: ^3.0.0
 
 
   # The following adds the Cupertino Icons font to your application.
