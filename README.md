@@ -1,6 +1,7 @@
 # STUD-BUD
 
-[![Watch the video](Logo.png)]
+[![Watch the video](Logo.png)](https://drive.google.com/file/d/1YoqAxKJS5emLJXyHkZUFkd1Ux6FOFPeA/view?usp=sharing)
+
 In these recent times (due the COVID 19) , the whole of education is taking a toll while it’s tested all over the country online. With this new concept of ‘Online’ education happening for the very first time, there’s bound to challenges for both Students and Teachers. But now that online education has a vivd part of the system , it not’s going anytime soon and so the solutions to the challenges of online education are of urgency. So here come’s Stud-Bud to the rescue
 
 StudBud aims to provide a very different approach to online studying. It will use concepts of Augmented Reality, Artificial Intelligence and many more technologies to bring a new way of studying and also get students all over the world get hooked on studying. StudBud will be an android mobile application which will get students fall in love with studies.
