@@ -1,6 +1,7 @@
 # STUD-BUD
 
 [![Watch the video](Logo.png)](https://drive.google.com/file/d/1YoqAxKJS5emLJXyHkZUFkd1Ux6FOFPeA/view?usp=sharing)
+
 **(Click the image to go to the video link of the App)**
 
 In these recent times (due the COVID 19) , the whole of education is taking a toll while it’s tested all over the country online. With this new concept of ‘Online’ education happening for the very first time, there’s bound to challenges for both Students and Teachers. But now that online education has a vivd part of the system , it not’s going anytime soon and so the solutions to the challenges of online education are of urgency. So here come’s Stud-Bud to the rescue
