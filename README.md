@@ -42,6 +42,7 @@ Students tend to use their mobile phones alot for personal reasons and hence the
 <p float="left">
 <img src = "WofAI.jpg" height=300>
 <img src = "WolfAI1.jpg" height=300>
+ <img src = "wolfans.jpeg" height=300>
 </p>
 Students generally tend to stumble over complex mathematical and science questions , many of which google cannot provide answers / steps to solve the problem. Wolf AI is a feature integrated in our application that will give solutions to most of the mathematical and science questions with steps to solve the problem. Just enter the question/equation and find the solution right away.
 
