@@ -28,7 +28,11 @@ Students generally tend to stumble over complex mathematical and science questio
 
 Student and teachers need to have one on one interaction daily and hence this feature of connecting people with one on one chat and video conferencing will help interact with others much better.
 
-
+### Concluding Statement
+ Thus by implementing all the features in our app due to it's unique stucture and algorithms used we,Ctr-Alt-Elite , belive that no matter what happen in future the education of the upcoming generation will not be compromized.
+ 
+#### Thanking You -
+#### Team, Ctrl-Alt-Elite
 
 
 
