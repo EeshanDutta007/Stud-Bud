@@ -25,6 +25,7 @@ Students tend to miss out the experience of laboratory experiments in online cla
 <p float="left">
 <img src = "Parafi.jpg" height=300>
 <img src = "Parafi1.jpg" height=300>
+ <img src = "wolfans.jpeg" height=300>
 </p>
 
 It is personalised Artificial Intelligence algorithm which will find answers of questions from the paragraph/passage. It is a feature that will help students locate answers from huge paragraphs of English comprehension and give solutions of entered questions within seconds. It will be a time-saver for students who tend to skip some part of comprehension and have to read it all over again and again to find answers.
@@ -42,7 +43,7 @@ Students tend to use their mobile phones alot for personal reasons and hence the
 <p float="left">
 <img src = "WofAI.jpg" height=300>
 <img src = "WolfAI1.jpg" height=300>
- <img src = "wolfans.jpeg" height=300>
+ 
 </p>
 Students generally tend to stumble over complex mathematical and science questions , many of which google cannot provide answers / steps to solve the problem. Wolf AI is a feature integrated in our application that will give solutions to most of the mathematical and science questions with steps to solve the problem. Just enter the question/equation and find the solution right away.
 
