@@ -17,10 +17,11 @@ class Profile extends StatefulWidget {
   _ProfileState createState() => _ProfileState();
 }
 
+TextEditingController Parent1 = new TextEditingController();
+TextEditingController Parent2 = new TextEditingController();
+TextEditingController Tutor = new TextEditingController();
+
 class _ProfileState extends State<Profile> {
-  TextEditingController Parent1 = new TextEditingController();
-  TextEditingController Parent2 = new TextEditingController();
-  TextEditingController  Tutor = new TextEditingController();
   File _image;
   final picker = ImagePicker();
   String CircleAvtarLink = null;
@@ -190,51 +191,42 @@ class _ProfileState extends State<Profile> {
             ),
           ),
           SizedBox(height: 24),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                child: TextField(
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              child: TextField(
                   controller: Parent1,
-                  decoration: InputDecoration(
-                    hintText: 'Parent1'
-                  )
-                ),
-              ),
-            ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              child: TextField(
-                controller: Parent2,
-                  decoration: InputDecoration(
-                      hintText: 'Parent2'
-                  )
-              ),
+                  decoration: InputDecoration(hintText: 'Parent1')),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
               child: TextField(
-                controller: Tutor,
-                  decoration: InputDecoration(
-                      hintText: 'Tutor'
-                  )
-              ),
+                  controller: Parent2,
+                  decoration: InputDecoration(hintText: 'Parent2')),
             ),
           ),
-            ElevatedButton(
-              onPressed: () async {
-                FirebaseAuth.instance.signOut();
-                final prefs = await SharedPreferences.getInstance();
-                prefs.remove('stud_bud_email');
-                prefs.remove('student_tutor');
-                main();
-                Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (context) => Authentication()));
-              },
-              child: Text('Logout'),
-            )
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              child: TextField(
+                  controller: Tutor,
+                  decoration: InputDecoration(hintText: 'Tutor')),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () async {
+              FirebaseAuth.instance.signOut();
+              final prefs = await SharedPreferences.getInstance();
+              prefs.remove('stud_bud_email');
+              prefs.remove('student_tutor');
+              main();
+              Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) => Authentication()));
+            },
+            child: Text('Logout'),
+          )
         ],
       ),
     ));

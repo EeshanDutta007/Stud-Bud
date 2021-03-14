@@ -28,6 +28,7 @@ class _SideNavBarState extends State<SideNavBar> {
             image: DecorationImage(
                 image: AssetImage('assets/Background.jpg'), fit: BoxFit.cover)),
         child: Scaffold(
+            resizeToAvoidBottomInset: false,
             // appBar: AppBar(
             //   backgroundColor: Colors.transparent,
             //   elevation: 0,
