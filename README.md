@@ -1,4 +1,4 @@
-# STUDBUD
+# STUD-BUD
 
 [![Watch the video](Logo.png)]
 In these recent times (due the COVID 19) , the whole of education is taking a toll while it’s tested all over the country online. With this new concept of ‘Online’ education happening for the very first time, there’s bound to challenges for both Students and Teachers. But now that online education has a vivd part of the system , it not’s going anytime soon and so the solutions to the challenges of online education are of urgency. So here come’s Stud-Bud to the rescue
@@ -13,7 +13,7 @@ StudBud aims to provide a very different approach to online studying. It will us
 <p float="left">
 <img src = "AR1.jpg" height=300>
 <img src = "Ar2.jpg" height=300>
-<img src = "AR2.jpg" height=300>
+<img src = "AR3.jpg" height=300>
 </p>
 
 Students tend to miss out the experience of laboratory experiments in online classes and main reason for missing out is ‘Lack of Visualisation’. So Stud-Bud will incorporate 3D models and animations to give students a LIVE feel of laboratory classes. Students will be able to do functions with the models like - open camera place it on a plane, zoom in, zoom out, rotate etc etc with the models.
@@ -37,7 +37,7 @@ Students tend to use their mobile phones alot for personal reasons and hence the
 
 ### Wolf AI
 <p float="left">
-<img src = "WolfAI.jpg" height=300>
+<img src = "WofAI.jpg" height=300>
 <img src = "WolfAI1.jpg" height=300>
 </p>
 Students generally tend to stumble over complex mathematical and science questions , many of which google cannot provide answers / steps to solve the problem. Wolf AI is a feature integrated in our application that will give solutions to most of the mathematical and science questions with steps to solve the problem. Just enter the question/equation and find the solution right away.
@@ -46,6 +46,7 @@ Students generally tend to stumble over complex mathematical and science questio
 <p float="left">
 <img src = "list_of_tutors.jpg" height=300>
 <img src = "one_on_one.jpg" height=300>
+ <img src = "one-on-one1.jpg" height=300>
  <img src = "Video1.jpg" height=300>
 </p>
 Student and teachers need to have one on one interaction daily and hence this feature of connecting people with one on one chat and video conferencing will help interact with others much better.
