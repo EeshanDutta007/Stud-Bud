@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:all_sensors/all_sensors.dart';
 import 'package:flutter_otp/flutter_otp.dart';
 import 'Profile.dart';
+import 'Profile.dart';
 
 class FlipFocus extends StatefulWidget {
   @override
@@ -89,7 +90,11 @@ class _FlipFocusState extends State<FlipFocus> {
                         } else {
                           timerSubscription.pause();
                           if (secondsStr != '00') {
-                            otp.sendOtp('${Parent1.text}', '$secondsStr', 1000,
+                            otp.sendOtp('${Parent1.text}', 'Your child has not used the phone and studied for $hoursStr:$minutesStr:$secondsStr since the start of the session.', 1000,
+                                6000, "+91");
+                            otp.sendOtp('${Parent2.text}', 'Your child has not used the phone and studied for $hoursStr:$minutesStr:$secondsStr since the start of the session.', 1000,
+                                6000, "+91");
+                            otp.sendOtp('${Tutor.text}', 'Your student has not used the phone and studied for $hoursStr:$minutesStr:$secondsStr since the start of the session.', 1000,
                                 6000, "+91");
                           }
                         }
