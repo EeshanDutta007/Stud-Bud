@@ -194,6 +194,7 @@ class _ProfileState extends State<Profile> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
+              color: Colors.white,
               child: TextField(
                   controller: Parent1,
                   decoration: InputDecoration(hintText: 'Parent1')),
@@ -202,14 +203,20 @@ class _ProfileState extends State<Profile> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+              ),
               child: TextField(
                   controller: Parent2,
-                  decoration: InputDecoration(hintText: 'Parent2')),
+                  decoration: InputDecoration(
+                    hintText: 'Parent2',
+                  )),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
+              color: Colors.white,
               child: TextField(
                   controller: Tutor,
                   decoration: InputDecoration(hintText: 'Tutor')),

@@ -74,7 +74,7 @@ class _ChatState extends State<Chat> {
             Navigator.pop(context);
           },
         ),
-        backgroundColor: Colors.purple,
+        backgroundColor: Colors.blue,
         title: Text('ChatApp'),
       ),
       body: Container(
@@ -87,7 +87,7 @@ class _ChatState extends State<Chat> {
               child: Container(
                 decoration: BoxDecoration(
                   border: Border(
-                    top: BorderSide(color: Colors.purple, width: 2.0),
+                    top: BorderSide(color: Colors.blue, width: 2.0),
                   ),
                 ),
                 padding: EdgeInsets.symmetric(vertical: 4),
@@ -120,7 +120,7 @@ class _ChatState extends State<Chat> {
                             width: 40,
                             decoration: BoxDecoration(
                                 gradient: LinearGradient(
-                                    colors: [Colors.purple, Colors.purple],
+                                    colors: [Colors.blue, Colors.blue],
                                     begin: FractionalOffset.topLeft,
                                     end: FractionalOffset.bottomRight),
                                 borderRadius: BorderRadius.circular(40)),
@@ -175,12 +175,12 @@ class MessageTile extends StatelessWidget {
                     topRight: Radius.circular(30.0),
                   ),
             elevation: 5.0,
-            color: sendByMe ? Colors.purple : Colors.white,
+            color: sendByMe ? Colors.blue : Colors.white,
             child: Padding(
                 padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
                 child: Text(message,
                     style: TextStyle(
-                      color: sendByMe ? Colors.white : Colors.purple,
+                      color: sendByMe ? Colors.white : Colors.blue,
                       fontSize: 15.0,
                     ))),
           ),
